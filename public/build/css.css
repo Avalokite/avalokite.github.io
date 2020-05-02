@@ -194,6 +194,7 @@ button:hover {
     width: 50px;
     color: black
 }
+.strategycard.r{transform:(-90deg)}
 
 .playerboard {
     text-align: left;
@@ -330,3 +331,5 @@ button:hover {
     border-radius: 12px;
     border: 6px double black
 }
+
+.static {position:absolute}

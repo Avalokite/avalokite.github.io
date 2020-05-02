@@ -1240,17 +1240,17 @@
   <div>
     <!--shuffle, roll, clear, map, custodian, speakertoken, scoreboard,-->
 
-    <button id="roll1" style="left:30px;padding-left:3px;padding-right:3px">roll🎲</button>
-    <button id="clear1" onclick="cleardice(1)" style="left:100px;padding-left:3px;padding-right:3px">break</button>
-    <pre id="log1" class="log" style="position:absolute;left:0px;top:-20px; height:99%" id=log1>0</pre>
-    <button id="roll2" onclick="rolldice(2)" style="right:30px;padding-left:3px;padding-right:3px">roll🎲</button>
-    <button id="clear2" onclick="cleardice(2)" style="right:100px;padding-left:3px;padding-right:3px">break</button>
-    <pre id="log2" class="log" style="position:absolute;right:0px;top:-20px; height:99%" id=log2>0</pre>
+    <button id="roll1" class="static" style="left:30px;padding-left:3px;padding-right:3px">roll🎲</button>
+    <button id="clear1" class="static" onclick="cleardice(1)" style="left:100px;padding-left:3px;padding-right:3px">break</button>
+    <pre id="log1" class="log static" style="position:absolute;left:0px;top:-20px; height:99%" id=log1>0</pre>
+    <button id="roll2" class="static" onclick="rolldice(2)" style="right:30px;padding-left:3px;padding-right:3px">roll🎲</button>
+    <button id="clear2" class="static" onclick="cleardice(2)" style="right:100px;padding-left:3px;padding-right:3px">break</button>
+    <pre id="log2" class="log static" style="position:absolute;right:0px;top:-20px; height:99%" id=log2>0</pre>
     <button id="custodian" class="commodity"
       style="height:70px;width:70px;color:white;background-color:rgba(30, 143, 255, 0.507);border-radius:35px;top:530px;left:930px">6</button>
     <button id="speakertoken" class="speakertoken" style="top:90px;left:430px;">Speaker</button>
     <button id="scoreboard" class="scoreboard">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</button>
-    <textarea id="playerboard0" class="playerboard" style="top:158px;left:25px;border-color:firebrick">
+    <textarea id="playerboard0" class="playerboard static" style="top:158px;left:25px;border-color:firebrick">
 
 
 
@@ -1264,7 +1264,7 @@ S
 
 </textarea>
 
-    <textarea id="playerboard1" class="playerboard" style="top:558px;left:25px;border-color:gold">
+    <textarea id="playerboard1" class="playerboard static" style="top:558px;left:25px;border-color:gold">
 
 
 
@@ -1277,7 +1277,7 @@ F
 S
 
 </textarea>
-    <textarea id="playerboard2" class="playerboard" style="top:158px;left:1453px;border-color:forestgreen">
+    <textarea id="playerboard2" class="playerboard static" style="top:158px;left:1453px;border-color:forestgreen">
 
 
 
@@ -1290,7 +1290,7 @@ F
 S
 
 </textarea>
-    <textarea id="playerboard3" class="playerboard" style="top:558px;left:1453px;border-color:dodgerblue">
+    <textarea id="playerboard3" class="playerboard static" style="top:558px;left:1453px;border-color:dodgerblue">
 
 
 
@@ -1308,11 +1308,11 @@ S
     <!---player specific-->
 
     <!-- <button id="screen0" class="screen" style="top:160px;left:25px;"></button> -->
-    <button id="screen1" class="screen" style="top:560px;left:25px;"></button>
-    <button id="screen2" class="screen" style="top:160px;left:1455px;"></button>
-    <button id="screen3" class="screen" style="top:560px;left:1455px;"></button>
+    <button id="screen1" class="screen static" style="top:560px;left:25px;"></button>
+    <button id="screen2" class="screen static" style="top:160px;left:1455px;"></button>
+    <button id="screen3" class="screen static" style="top:560px;left:1455px;"></button>
 
-    <img src="/map2.jpg" class="img">
+    <img src="/map2.jpg" class="img static">
 
     <button id="timer" class="timer" style="top:50%;left:50%">0</button>
 
@@ -1335,8 +1335,8 @@ War Funding: At the start of a round of space combat: The Letnev player loses 2 
   </div>
   <div>
     <!--reset only-->
-    <button id="shuffle" style="bottom:10px;right:10px">shuffle</button>
-    <button id="reset" style="bottom:10px;left:500px">reset</button>
+    <button id="shuffle static" style="bottom:10px;right:10px">shuffle</button>
+    <button id="reset static" style="bottom:10px;left:500px">reset</button>
   </div>
   <script defer src="/__/firebase/init.js"></script>
   <script defer src="/build/reset.js"></script>
