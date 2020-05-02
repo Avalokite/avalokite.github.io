@@ -37,7 +37,7 @@ pre {
 
 button {
     z-index: 100;
-    font-family: "consolas";
+    font-family: "consolas",'Courier New', Courier, monospace;
     font-size: 16px;
     box-sizing: border-box;
     margin: 0px;
@@ -107,7 +107,7 @@ button:hover {
 }
 
 .card.tech {
-    z-index: 1001px;
+    z-index: 1001;
     background-color: #00000000;
     border: 1px solid currentColor;
     font-size: 16;
@@ -192,7 +192,8 @@ button:hover {
     border-bottom-right-radius: 30%;
     height: 70px;
     width: 50px;
-    color: black
+    color: black;
+    z-index: 1002
 }
 .strategycard.r{transform:(-90deg)}
 
@@ -326,10 +327,11 @@ button:hover {
 }
 
 .raceToken {
+    z-index:1001;
     width: 41px;
     height: 35px;
     border-radius: 12px;
     border: 6px double black
 }
 
-.static {position:absolute}
+.static {visibility: visible;}

@@ -4,16 +4,17 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title></title>
+  <title>BLUE</title>
   <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
   <script defer src="/__/firebase/7.14.2/firebase-database.js"></script>
-  <link rel='stylesheet' href='/build/blueb.css'>
   <link rel='stylesheet' href='/build/css.css'>
+  <link rel='stylesheet' href='/build/blueb.css'>
 </head>
 
 <body>
-  <!--action cards-->
   <div>
+    <!--action cards-->
+
     <button id="actcard0" class="card r v act" style="top: 10px; left:180px"
       title="Ancient Burial Sites - At the start of the agenda phase: Choose 1 player. Exhaust each cultural planet owned by that player.">A</button>
     <button id="actcard1" class="card r v act" style="top: 10px; left:180px"
@@ -175,8 +176,9 @@
     <button id="actcard79" class="card r v act" style="top: 10px; left:180px"
       title="Warfare Rider - After an agenda is revealed: You cannot vote on this agenda. Predict aloud an outcome of this agenda. If your prediction is correct, place 1 dreadnought from your reinforcements in a system that contains 1 or more of your ships.">A</button>
   </div>
-  <!--agenda cards-->
   <div>
+    <!--agenda cards-->
+
     <button id="agnd0" class="card r v agnd" style="top: 10px; left:230px"
       title="Anti-Intellectual Revolution? After a player researches a technology, they must destroy one of their non-fighter ships. 👎At the start of the next strategy phase each player exhausts one planet for each technology they have researched.">A</button>
     <button id="agnd1" class="card r v agnd" style="top: 10px; left:230px"
@@ -222,7 +224,7 @@
     <button id="agnd21" class="card r v agnd" style="top: 10px; left:230px"
       title="Regulated Conscription? 👍Each fighter or infantry requires 1 resource instead of 1/2 of a resource to produce. ">A</button>
     <button id="agnd22" class="card r v agnd" style="top: 10px; left:230px" title="Representative Government? 👍Players cannot exhaust planets to cast votes during the agenda phase. Each player may cast 1 vote on each agenda. 👎At the start of the next strategy phase, each player that voted
-      Against exhausts all of his cultural planets.">A</button>
+    Against exhausts all of his cultural planets.">A</button>
     <button id="agnd23" class="card r v agnd" style="top: 10px; left:230px"
       title="Research Team: Biotic? 👍When this planet's owner researches technology they may exhaust this card to ignore a green prerequisite.">A</button>
     <button id="agnd24" class="card r v agnd" style="top: 10px; left:230px"
@@ -278,68 +280,70 @@
     <button id="agnd49" class="card r v agnd" style="top: 10px; left:230px"
       title="Wormhole Research? 👍Each player with a ship in a system with an alpha or beta wormhole destroys all his ships in those systems, then researches a technology. 👎Each player who voted Against removes a command token from his command sheet.">A</button>
   </div>
-  <!--planet cards-->
   <div>
-    <button id="cul00" class="card planet cul" style="top: 10px; left:430px" title="Centauri">1/3</button>
-    <button id="cul01" class="card planet cul" style="top: 10px; left:430px" title="Coorneeq">1/2</button>
-    <button id="cul02" class="card planet cul" style="top: 10px; left:430px" title="Dal Bootha">0/2</button>
-    <button id="cul03" class="card planet cul" style="top: 10px; left:430px" title="Lodor">3/1</button>
-    <button id="cul04" class="card planet cul" style="top: 10px; left:430px" title="Mellon">0/2</button>
-    <button id="cul05" class="card planet cul" style="top: 10px; left:430px" title="Quann">2/1</button>
-    <button id="cul06" class="card planet cul" style="top: 10px; left:430px" title="Rarron">0/3</button>
-    <button id="cul07" class="card planet cul" style="top: 10px; left:430px" title="Resculon">2/0</button>
-    <button id="cul08" class="card planet cul" style="top: 10px; left:430px" title="Torkan">0/3</button>
-    <button id="cul09" class="card planet cul" style="top: 10px; left:430px" title="Xxehan">1/1</button>
-    <button id="haz00" class="card planet haz" style="top: 10px; left:480px" title="Abyz">3/0</button>
-    <button id="haz01" class="card planet haz" style="top: 10px; left:480px" title="Bereg">3/1</button>
-    <button id="haz02" class="card planet haz" style="top: 10px; left:480px" title="Fria">2/0</button>
-    <button id="haz03" class="card planet haz" style="top: 10px; left:480px" title="Lirta IV">2/3</button>
-    <button id="haz04" class="card planet haz" style="top: 10px; left:480px" title="Meer">0/4<sub>R</sub></button>
-    <button id="haz05" class="card planet haz" style="top: 10px; left:480px" title="Mehar Xull">1/3<sub>R</sub></button>
-    <button id="haz06" class="card planet haz" style="top: 10px; left:480px" title="Sakulag">2/1</button>
-    <button id="haz07" class="card planet haz" style="top: 10px; left:480px" title="Starpoint">3/1</button>
-    <button id="haz08" class="card planet haz" style="top: 10px; left:480px" title="Tequ'ran">2/0</button>
-    <button id="haz09" class="card planet haz" style="top: 10px; left:480px" title="Zhobat">3/1</button>
-    <button id="hs0" class="card planet hs" style="top: 10px; left:580px" title="Kamdorn">0/1</button>
-    <button id="hs1" class="card planet hs" style="top: 10px; left:580px" title="Maaluuk">0/2</button>
-    <button id="hs2" class="card planet hs" style="top: 10px; left:580px" title="Lisis II">1/0</button>
-    <button id="hs3" class="card planet hs" style="top: 10px; left:580px" title="Tren'Lak">1/0</button>
-    <button id="hs4" class="card planet hs" style="top: 10px; left:580px" title="Hercant">1/1</button>
-    <button id="hs5" class="card planet hs" style="top: 10px; left:580px" title="Archon Tau">1/1</button>
-    <button id="hs6" class="card planet hs" style="top: 10px; left:580px" title="Jol">1/2</button>
-    <button id="hs7" class="card planet hs" style="top: 10px; left:580px" title="Shalloq">1/2</button>
-    <button id="hs8" class="card planet hs" style="top: 10px; left:580px" title="Arretze">2/0</button>
-    <button id="hs9" class="card planet hs" style="top: 10px; left:580px" title="Wren Terra">2/1</button>
-    <button id="hs10" class="card planet hs" style="top: 10px; left:580px" title="Ragh">2/1</button>
-    <button id="hs11" class="card planet hs" style="top: 10px; left:580px" title="Nar">2/3</button>
-    <button id="hs12" class="card planet hs" style="top: 10px; left:580px" title="Archon Ren">2/3</button>
-    <button id="hs13" class="card planet hs" style="top: 10px; left:580px" title="Retillion">2/3</button>
-    <button id="hs14" class="card planet hs" style="top: 10px; left:580px" title="Druaa">3/1</button>
-    <button id="hs15" class="card planet hs" style="top: 10px; left:580px" title="Quinarra">3/1</button>
-    <button id="hs16" class="card planet hs" style="top: 10px; left:580px" title="Nestphar">3/2</button>
-    <button id="hs17" class="card planet hs" style="top: 10px; left:580px" title="Winnu">3/4</button>
-    <button id="hs18" class="card planet hs" style="top: 10px; left:580px" title="Arc Prime">4/0</button>
-    <button id="hs19" class="card planet hs" style="top: 10px; left:580px" title="Mordai II">4/0</button>
-    <button id="hs20" class="card planet hs" style="top: 10px; left:580px" title="Moll Primus">4/1</button>
-    <button id="hs21" class="card planet hs" style="top: 10px; left:580px" title="Muaat">4/1</button>
-    <button id="hs22" class="card planet hs" style="top: 10px; left:580px" title="Creuss">4/2</button>
-    <button id="hs23" class="card planet hs" style="top: 10px; left:580px" title="Jord">4/2</button>
-    <button id="hs24" class="card planet hs" style="top: 10px; left:580px" title="Darien">4/4</button>
-    <button id="hs25" class="card planet hs" style="top: 10px; left:580px" title="[0.0.0]">5/0</button>
-    <button id="hs26" class="card planet hs" style="top: 10px; left:580px" title="Mecatol Rex">1/6</button>
-    <button id="ind00" class="card planet ind" style="top: 10px; left:530px" title="Arinam">1/2</button>
-    <button id="ind01" class="card planet ind" style="top: 10px; left:530px" title="Arnor">1/2</button>
-    <button id="ind02" class="card planet ind" style="top: 10px; left:530px" title="Gral">1/1<sub>B</sub></button>
-    <button id="ind03" class="card planet ind" style="top: 10px; left:530px" title="Lazar">1/0<sub>Y</sub></button>
-    <button id="ind04" class="card planet ind" style="top: 10px; left:530px" title="Lor">2/1</button>
-    <button id="ind05" class="card planet ind" style="top: 10px; left:530px" title="New Albion">1/1<sub>G</sub></button>
-    <button id="ind06" class="card planet ind" style="top: 10px; left:530px" title="Qucen'n">1/2</button>
-    <button id="ind07" class="card planet ind" style="top: 10px; left:530px" title="Tar'Mann">1/1<sub>G</sub></button>
-    <button id="ind08" class="card planet ind" style="top: 10px; left:530px" title="Thibah">1/1<sub>B</sub></button>
-    <button id="ind09" class="card planet ind" style="top: 10px; left:530px" title="Wellon">1/2<sub>Y</sub></button>
+    <!--planet cards-->
+
+    <button id="cul00" class="card planet cul" style="top: 70px; left: 30px" title="Centauri">1/3</button>
+    <button id="cul01" class="card planet cul" style="top: 70px; left: 30px" title="Coorneeq">1/2</button>
+    <button id="cul02" class="card planet cul" style="top: 70px; left: 30px" title="Dal Bootha">0/2</button>
+    <button id="cul03" class="card planet cul" style="top: 70px; left: 30px" title="Lodor">3/1</button>
+    <button id="cul04" class="card planet cul" style="top: 70px; left: 30px" title="Mellon">0/2</button>
+    <button id="cul05" class="card planet cul" style="top: 70px; left: 30px" title="Quann">2/1</button>
+    <button id="cul06" class="card planet cul" style="top: 70px; left: 30px" title="Rarron">0/3</button>
+    <button id="cul07" class="card planet cul" style="top: 70px; left: 30px" title="Resculon">2/0</button>
+    <button id="cul08" class="card planet cul" style="top: 70px; left: 30px" title="Torkan">0/3</button>
+    <button id="cul09" class="card planet cul" style="top: 70px; left: 30px" title="Xxehan">1/1</button>
+    <button id="haz00" class="card planet haz" style="top: 40px; left: 70px" title="Abyz">3/0</button>
+    <button id="haz01" class="card planet haz" style="top: 40px; left: 70px" title="Bereg">3/1</button>
+    <button id="haz02" class="card planet haz" style="top: 40px; left: 70px" title="Fria">2/0</button>
+    <button id="haz03" class="card planet haz" style="top: 40px; left: 70px" title="Lirta IV">2/3</button>
+    <button id="haz04" class="card planet haz" style="top: 40px; left: 70px" title="Meer">0/4<sub>R</sub></button>
+    <button id="haz05" class="card planet haz" style="top: 40px; left: 70px" title="Mehar Xull">1/3<sub>R</sub></button>
+    <button id="haz06" class="card planet haz" style="top: 40px; left: 70px" title="Sakulag">2/1</button>
+    <button id="haz07" class="card planet haz" style="top: 40px; left: 70px" title="Starpoint">3/1</button>
+    <button id="haz08" class="card planet haz" style="top: 40px; left: 70px" title="Tequ'ran">2/0</button>
+    <button id="haz09" class="card planet haz" style="top: 40px; left: 70px" title="Zhobat">3/1</button>
+    <button id="hs0" class="card planet hs" style="top: 40px; left: 30px" title="Kamdorn">0/1</button>
+    <button id="hs1" class="card planet hs" style="top: 40px; left: 30px" title="Maaluuk">0/2</button>
+    <button id="hs2" class="card planet hs" style="top: 40px; left: 30px" title="Lisis II">1/0</button>
+    <button id="hs3" class="card planet hs" style="top: 40px; left: 30px" title="Tren'Lak">1/0</button>
+    <button id="hs4" class="card planet hs" style="top: 40px; left: 30px" title="Hercant">1/1</button>
+    <button id="hs5" class="card planet hs" style="top: 40px; left: 30px" title="Archon Tau">1/1</button>
+    <button id="hs6" class="card planet hs" style="top: 40px; left: 30px" title="Jol">1/2</button>
+    <button id="hs7" class="card planet hs" style="top: 40px; left: 30px" title="Shalloq">1/2</button>
+    <button id="hs8" class="card planet hs" style="top: 40px; left: 30px" title="Arretze">2/0</button>
+    <button id="hs9" class="card planet hs" style="top: 40px; left: 30px" title="Wren Terra">2/1</button>
+    <button id="hs10" class="card planet hs" style="top: 40px; left: 30px" title="Ragh">2/1</button>
+    <button id="hs11" class="card planet hs" style="top: 40px; left: 30px" title="Nar">2/3</button>
+    <button id="hs12" class="card planet hs" style="top: 40px; left: 30px" title="Archon Ren">2/3</button>
+    <button id="hs13" class="card planet hs" style="top: 40px; left: 30px" title="Retillion">2/3</button>
+    <button id="hs14" class="card planet hs" style="top: 40px; left: 30px" title="Druaa">3/1</button>
+    <button id="hs15" class="card planet hs" style="top: 40px; left: 30px" title="Quinarra">3/1</button>
+    <button id="hs16" class="card planet hs" style="top: 40px; left: 30px" title="Nestphar">3/2</button>
+    <button id="hs17" class="card planet hs" style="top: 40px; left: 30px" title="Winnu">3/4</button>
+    <button id="hs18" class="card planet hs" style="top: 40px; left: 30px" title="Arc Prime">4/0</button>
+    <button id="hs19" class="card planet hs" style="top: 40px; left: 30px" title="Mordai II">4/0</button>
+    <button id="hs20" class="card planet hs" style="top: 40px; left: 30px" title="Moll Primus">4/1</button>
+    <button id="hs21" class="card planet hs" style="top: 40px; left: 30px" title="Muaat">4/1</button>
+    <button id="hs22" class="card planet hs" style="top: 40px; left: 30px" title="Creuss">4/2</button>
+    <button id="hs23" class="card planet hs" style="top: 40px; left: 30px" title="Jord">4/2</button>
+    <button id="hs24" class="card planet hs" style="top: 40px; left: 30px" title="Darien">4/4</button>
+    <button id="hs25" class="card planet hs" style="top: 40px; left: 30px" title="[0.0.0]">5/0</button>
+    <button id="hs26" class="card planet hs" style="top: 40px; left: 30px" title="Mecatol Rex">1/6</button>
+    <button id="ind00" class="card planet ind" style="top: 70px; left: 70px" title="Arinam">1/2</button>
+    <button id="ind01" class="card planet ind" style="top: 70px; left: 70px" title="Arnor">1/2</button>
+    <button id="ind02" class="card planet ind" style="top: 70px; left: 70px" title="Gral">1/1<sub>B</sub></button>
+    <button id="ind03" class="card planet ind" style="top: 70px; left: 70px" title="Lazar">1/0<sub>Y</sub></button>
+    <button id="ind04" class="card planet ind" style="top: 70px; left: 70px" title="Lor">2/1</button>
+    <button id="ind05" class="card planet ind" style="top: 70px; left: 70px" title="New Albion">1/1<sub>G</sub></button>
+    <button id="ind06" class="card planet ind" style="top: 70px; left: 70px" title="Qucen'n">1/2</button>
+    <button id="ind07" class="card planet ind" style="top: 70px; left: 70px" title="Tar'Mann">1/1<sub>G</sub></button>
+    <button id="ind08" class="card planet ind" style="top: 70px; left: 70px" title="Thibah">1/1<sub>B</sub></button>
+    <button id="ind09" class="card planet ind" style="top: 70px; left: 70px" title="Wellon">1/2<sub>Y</sub></button>
   </div>
-  <!--promissary notes-->
   <div>
+    <!--promissary notes-->
+
     <button id="promissary0" class="card prom p0" style="top:180px; left:310px"
       title="Ceasefire: After the (color) player activates a system that contains 1 or more of your unit: The (color) player cannot move units into the active system.Then, return this card to the (color) player.">CF</button>
     <button id="promissary1" class="card prom p1" style="top:580px; left:310px"
@@ -381,8 +385,9 @@
     <button id="promissary23" class="card prom p3" style="top:580px; left:1730px"
       title="Faction Promissary Note">FP</button>
   </div>
-  <!--tech cards-->
   <div>
+    <!--tech cards-->
+
     <button id="techcardp1a" class="card tech unit p0" style="left: 1830px; top: 60px" title="Faction Tech 1"><span
         style="color:firebrick">Fac1</span></button>
     <button id="techcardp1b" class="card tech unit p0" style="left: 1830px; top: 60px" title="Faction Tech 2"><span
@@ -700,8 +705,9 @@
       title="X-89 Bacterial Weapon (GGG): After 1 or more of your units use BOMBARDMENT against a planet, if at least 1 of your opponent’s infantry was destroyed, destroy all of your opponent's infantry on that planet."><span
         style="color:green">GGG</span></button>
   </div>
-  <!--vp cards-->
   <div>
+    <!--vp cards-->
+
     <button id="vpi0" class="card r v vp vpi" style="top: 10px; left:330px"
       title="Erect a Monument: Status Phase Spend 8 resources.">I</button>
     <button id="vpi1" class="card r v vp vpi" style="top: 10px; left:330px"
@@ -783,20 +789,28 @@
     <button id="vps9" class="card r v vp vps" style="top: 10px; left:280px"
       title="Forge an Alliance: Status Phase Control 4 cultural planets.">S</button>
   </div>
-  <!--ships-->
   <div>
+    <!--ships-->
+    <button id="p3-War-Sun-00" class="ship p3" style="top: 560px; left:1650px">WarSun:</button>
+    <button id="p3-War-Sun-01" class="ship p3" style="top: 560px; left:1650px">WarSun:</button>
+    <button id="p0-War-Sun-00" class="ship p0" style="top: 160px; left:210px">WarSun:</button>
+    <button id="p0-War-Sun-01" class="ship p0" style="top: 160px; left:210px">WarSun:</button>
+    <button id="p2-War-Sun-00" class="ship p2" style="top: 160px; left:1650px">WarSun:</button>
+    <button id="p2-War-Sun-01" class="ship p2" style="top: 160px; left:1650px">WarSun:</button>
+    <button id="p1-War-Sun-00" class="ship p1" style="top: 560px; left:210px">WarSun:</button>
+    <button id="p1-War-Sun-01" class="ship p1" style="top: 560px; left:210px">WarSun:</button>
     <button id="p0-Car-00" class="ship p0" style="top: 160px; left:30px">Car:</button>
     <button id="p0-Car-01" class="ship p0" style="top: 160px; left:30px">Car:</button>
     <button id="p0-Car-02" class="ship p0" style="top: 160px; left:30px">Car:</button>
     <button id="p0-Car-03" class="ship p0" style="top: 160px; left:30px">Car:</button>
     <button id="p0-Cr-00" class="ship p0" style="top: 160px; left: 80px">Cr</button>
-    <button id="p0-Cr-01" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
-    <button id="p0-Cr-02" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
-    <button id="p0-Cr-03" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
-    <button id="p0-Cr-04" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
-    <button id="p0-Cr-05" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
-    <button id="p0-Cr-06" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
-    <button id="p0-Cr-07" class="ship p0" style="top: 160px; left: 80px">Cr:</button>
+    <button id="p0-Cr-01" class="ship p0" style="top: 160px; left: 80px">Cr</button>
+    <button id="p0-Cr-02" class="ship p0" style="top: 160px; left: 80px">Cr</button>
+    <button id="p0-Cr-03" class="ship p0" style="top: 160px; left: 80px">Cr</button>
+    <button id="p0-Cr-04" class="ship p0" style="top: 160px; left: 80px">Cr</button>
+    <button id="p0-Cr-05" class="ship p0" style="top: 160px; left: 80px">Cr</button>
+    <button id="p0-Cr-06" class="ship p0" style="top: 160px; left: 80px">Cr</button>
+    <button id="p0-Cr-07" class="ship p0" style="top: 160px; left: 80px">Cr</button>
     <button id="p0-D-00" class="ship p0" style="top: 160px; left:110px">D</button>
     <button id="p0-D-01" class="ship p0" style="top: 160px; left:110px">D</button>
     <button id="p0-D-02" class="ship p0" style="top: 160px; left:110px">D</button>
@@ -847,14 +861,14 @@
     <button id="p1-Car-01" class="ship p1" style="top: 560px; left:30px">Car:</button>
     <button id="p1-Car-02" class="ship p1" style="top: 560px; left:30px">Car:</button>
     <button id="p1-Car-03" class="ship p1" style="top: 560px; left:30px">Car:</button>
-    <button id="p1-Cr-00" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-01" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-02" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-03" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-04" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-05" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-06" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
-    <button id="p1-Cr-07" class="ship p1" style="top: 560px; left: 80px">Cr:</button>
+    <button id="p1-Cr-00" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-01" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-02" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-03" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-04" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-05" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-06" class="ship p1" style="top: 560px; left: 80px">Cr</button>
+    <button id="p1-Cr-07" class="ship p1" style="top: 560px; left: 80px">Cr</button>
     <button id="p1-D-00" class="ship p1" style="top: 560px; left:110px">D</button>
     <button id="p1-D-01" class="ship p1" style="top: 560px; left:110px">D</button>
     <button id="p1-D-02" class="ship p1" style="top: 560px; left:110px">D</button>
@@ -900,19 +914,18 @@
     <button id="p1-SD-00" class="ship p1" style="top: 560px; left:360px">SD:</button>
     <button id="p1-SD-01" class="ship p1" style="top: 560px; left:360px">SD:</button>
     <button id="p1-SD-02" class="ship p1" style="top: 560px; left:360px">SD:</button>
-
     <button id="p2-Car-00" class="ship p2" style="top: 160px; left:1470px">Car:</button>
     <button id="p2-Car-01" class="ship p2" style="top: 160px; left:1470px">Car:</button>
     <button id="p2-Car-02" class="ship p2" style="top: 160px; left:1470px">Car:</button>
     <button id="p2-Car-03" class="ship p2" style="top: 160px; left:1470px">Car:</button>
-    <button id="p2-Cr-00" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-01" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-02" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-03" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-04" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-05" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-06" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
-    <button id="p2-Cr-07" class="ship p2" style="top: 160px; left: 1520px">Cr:</button>
+    <button id="p2-Cr-00" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-01" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-02" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-03" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-04" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-05" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-06" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
+    <button id="p2-Cr-07" class="ship p2" style="top: 160px; left: 1520px">Cr</button>
     <button id="p2-D-00" class="ship p2" style="top: 160px; left:1550px">D</button>
     <button id="p2-D-01" class="ship p2" style="top: 160px; left:1550px">D</button>
     <button id="p2-D-02" class="ship p2" style="top: 160px; left:1550px">D</button>
@@ -962,14 +975,14 @@
     <button id="p3-Car-01" class="ship p3" style="top: 560px; left:1470px">Car:</button>
     <button id="p3-Car-02" class="ship p3" style="top: 560px; left:1470px">Car:</button>
     <button id="p3-Car-03" class="ship p3" style="top: 560px; left:1470px">Car:</button>
-    <button id="p3-Cr-00" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-01" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-02" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-03" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-04" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-05" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-06" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
-    <button id="p3-Cr-07" class="ship p3" style="top: 560px; left: 1520px">Cr:</button>
+    <button id="p3-Cr-00" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-01" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-02" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-03" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-04" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-05" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-06" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
+    <button id="p3-Cr-07" class="ship p3" style="top: 560px; left: 1520px">Cr</button>
     <button id="p3-D-00" class="ship p3" style="top: 560px; left:1550px">D</button>
     <button id="p3-D-01" class="ship p3" style="top: 560px; left:1550px">D</button>
     <button id="p3-D-02" class="ship p3" style="top: 560px; left:1550px">D</button>
@@ -1015,48 +1028,41 @@
     <button id="p3-SD-00" class="ship p3" style="top: 560px; left:1800px">SD:</button>
     <button id="p3-SD-01" class="ship p3" style="top: 560px; left:1800px">SD:</button>
     <button id="p3-SD-02" class="ship p3" style="top: 560px; left:1800px">SD:</button>
-    <button id="p3-War-Sun-00" class="ship p3" style="top: 560px; left:1650px">WarSun:</button>
-    <button id="p3-War-Sun-01" class="ship p3" style="top: 560px; left:1650px">WarSun:</button>
-    <button id="p0-War-Sun-00" class="ship p0" style="top: 160px; left:210px">WarSun:</button>
-    <button id="p0-War-Sun-01" class="ship p0" style="top: 160px; left:210px">WarSun:</button>
-    <button id="p2-War-Sun-00" class="ship p2" style="top: 160px; left:1650px">WarSun:</button>
-    <button id="p2-War-Sun-01" class="ship p2" style="top: 160px; left:1650px">WarSun:</button>
-    <button id="p1-War-Sun-00" class="ship p1" style="top: 560px; left:210px">WarSun:</button>
-    <button id="p1-War-Sun-01" class="ship p1" style="top: 560px; left:210px">WarSun:</button>
-  </div>
-  <!--commodity, cc, markers-->
-  <div>
-    <button id="TopAgendaCard" style="top: 50px; left: 100px;">Top</button>
-    <button id="SecondAgendaCard" style="top: 50px; left: 100px;">2nd</button>
 
-    <button id="wormholeA" style="top: 50px; left: 100px;">(A)</button>
-    <button id="wormholeB" style="top: 50px; left: 100px;">(B)</button>
+  </div>
+  <div>
+    <!--commodity, cc, markers-->
+
+    <button id="TopAgendaCard" style="top: 40px; left: 120px;">Top</button>
+    <button id="SecondAgendaCard" style="top: 40px; left: 120px;">2nd</button>
+    <button id="wormholeA" style="top: 40px; left: 120px;">(A)</button>
+    <button id="wormholeB" style="top: 40px; left: 120px;">(B)</button>
     <button id="NekroX"
-      style="top: 50px; left: 100px;color:white;background-color:firebrick;border:1px solid white;height:27px;border-radius:2px">(X)</button>
+      style="top: 40px; left: 120px;color:white;background-color:firebrick;border:1px solid white;height:27px;border-radius:2px">(X)</button>
     <button id="NekroY"
-      style="top: 50px; left: 100px;color:white;background-color:firebrick;border:1px solid white;height:27px;border-radius:2px">(Y)</button>
+      style="top: 40px; left: 120px;color:white;background-color:firebrick;border:1px solid white;height:27px;border-radius:2px">(Y)</button>
     <button id="Naalu0"
-      style="top: 50px; left: 100px;color:forestgreen;background-color:gold;border:1px solid white;height:33px;width:33px;border-radius:20px">(0)</button>
-    <button id="comm01" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm02" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm03" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm04" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm05" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm06" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm07" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm08" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm09" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm10" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm11" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm12" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm13" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm14" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm15" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm16" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm17" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm18" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm19" class="commodity" style="top: 50px; left:140px">$</button>
-    <button id="comm20" class="commodity" style="top: 50px; left:140px">$</button>
+      style="top: 40px; left: 120px;color:forestgreen;background-color:gold;border:1px solid white;height:33px;width:33px;border-radius:20px">(0)</button>
+    <button id="comm01" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm02" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm03" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm04" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm05" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm06" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm07" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm08" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm09" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm10" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm11" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm12" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm13" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm14" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm15" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm16" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm17" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm18" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm19" class="commodity" style="top: 60px; left:140px">$</button>
+    <button id="comm20" class="commodity" style="top: 60px; left:140px">$</button>
     <button id="p0-CC-0" class="p0 CC" style="left:350px;top:180px">🦂</button>
     <button id="p0-CC-1" class="p0 CC" style="left:350px;top:180px">🦂</button>
     <button id="p0-CC-2" class="p0 CC" style="left:350px;top:180px">🦂</button>
@@ -1202,8 +1208,8 @@
     <button id="p3-m-18" class="p3 marker" style="top:580px;left:1820px">🥶</button>
     <button id="p3-m-19" class="p3 marker" style="top:580px;left:1820px">🥶</button>
   </div>
-  <!--strategy cards-->
   <div>
+    <!--strategy cards-->
     <button id="s-1" class="strategycard"
       title="1° Gain 3 command tokens. Spend any amount of influence to gain 1 command token for every 3 influence spent. 2° Spend any amount of influence to gain 1 command token for every 3 influence spent."
       style="top:80px;left:1150px;background-color:firebrick">1<br>Lead</button>
@@ -1229,149 +1235,90 @@
       title="1° Immediately score 1 public objective if you fulfill its requirements. Gain 1 victory point if you control Mecatol Rex; otherwise, draw 1 secret objective. 2° Spend 1 token from your strategy pool to draw 1 secret objective."
       style="top:80px;left:1500px;background-color:purple">8<br>Imp</button>
   </div>
-  <!--shuffle, roll, clear, map, custodian, speakertoken, scoreboard,-->
   <div>
-    <button id="roll1" style="left:30px;padding-left:3px;padding-right:3px">roll🎲</button>
-    <button id="clear1" onclick="cleardice(1)" style="left:100px;padding-left:3px;padding-right:3px">break</button>
-    <pre id="log1" class="log" style="position:absolute;left:0px;top:-20px; height:99%" id=log1>0</pre>
-    <button id="roll2" onclick="rolldice(2)" style="right:30px;padding-left:3px;padding-right:3px">roll🎲</button>
-    <button id="clear2" onclick="cleardice(2)" style="right:100px;padding-left:3px;padding-right:3px">break</button>
-    <pre id="log2" class="log" style="position:absolute;right:0px;top:-20px; height:99%" id=log2>0</pre>
+    <!--shuffle, roll, clear, map, custodian, speakertoken, scoreboard,-->
+
+    <button id="roll1" class="static" style="left:30px;padding-left:3px;padding-right:3px">roll🎲</button>
+    <button id="clear1" class="static" onclick="cleardice(1)" style="left:100px;padding-left:3px;padding-right:3px">break</button>
+    <pre id="log1" class="log static" style="position:absolute;left:0px;top:-20px; height:99%" id=log1>0</pre>
+    <button id="roll2" class="static" onclick="rolldice(2)" style="right:30px;padding-left:3px;padding-right:3px">roll🎲</button>
+    <button id="clear2" class="static" onclick="cleardice(2)" style="right:100px;padding-left:3px;padding-right:3px">break</button>
+    <pre id="log2" class="log static" style="position:absolute;right:0px;top:-20px; height:99%" id=log2>0</pre>
     <button id="custodian" class="commodity"
-      style="height:70px;width:70px;color:white;background-color:rgba(30, 143, 255, 0.507);border-radius:35px;top:530px;left:930px">6</button>
+      style="height:65px;width:65px;color:white;background-color:rgba(30, 143, 255, 0.507);border-radius:35px;top:520px;left:920px">6</button>
     <button id="speakertoken" class="speakertoken" style="top:90px;left:430px;">Speaker</button>
-    <button id="scoreboard" class="scoreboard">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</button>
-    <textarea id="playerboard0" class="playerboard" style="top:158px;left:25px;border-color:firebrick">
+    <button id="scoreboard" class="scoreboard static">1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10</button>
+    <textarea id="playerboard0" class="playerboard static" style="top:158px;left:25px;border-color:firebrick">
 
 
-  T
 
---------
-  F
+T
 
 --------
-  S
-
-  </textarea>
-
-    <textarea id="playerboard1" class="playerboard" style="top:558px;left:25px;border-color:gold">
-
-
-  T
+F
 
 --------
-  F
-
---------
-  S
+S
 
 </textarea>
-    <textarea id="playerboard2" class="playerboard" style="top:158px;left:1453px;border-color:forestgreen">
+
+    <textarea id="playerboard1" class="playerboard static" style="top:558px;left:25px;border-color:gold">
 
 
-  T
+
+T
 
 --------
-  F
+F
 
 --------
-  S
+S
 
 </textarea>
-    <textarea id="playerboard3" class="playerboard" style="top:558px;left:1453px;border-color:dodgerblue">
+    <textarea id="playerboard2" class="playerboard static" style="top:158px;left:1453px;border-color:forestgreen">
 
 
-  T
 
---------
-  F
+T
 
 --------
-  S
+F
+
+--------
+S
+
+</textarea>
+    <textarea id="playerboard3" class="playerboard static" style="top:558px;left:1453px;border-color:dodgerblue">
+
+
+
+T
+
+--------
+F
+
+--------
+S
 
 </textarea>
   </div>
-<!---player specific-->
-<div>
-    <button id="screen0" class="screen" style="top:160px;left:25px;"></button>
-    <button id="screen1" class="screen" style="top:560px;left:25px;"></button>
-    <button id="screen2" class="screen" style="top:160px;left:1455px;"></button>
-    <!-- <button id="screen3" class="screen" style="top:560px;left:1455px;"></button> -->
+  <div>
+    <!---player specific-->
 
-    <img src="/map2.jpg" class="img">
+    <button id="screen0" class="static screen" style="top:160px;left:25px;"></button>
+    <button id="screen1" class="static screen " style="top:560px;left:25px;"></button>
+    <button id="screen2" class="static screen " style="top:160px;left:1455px;"></button>
+    <!-- <button id="screen3" class="static screen " style="top:560px;left:1455px;"></button> -->
+
+    <img src="/map2.jpg" class="img static">
 
     <button id="timer" class="timer" style="top:50%;left:50%">0</button>
- 
-  <button id="p0-marker-raceToken" class="p0 marker raceToken" style="left:350px;top:180px" title="The Barony of Letnev
-  Commodities: 2
-  Flagship:Other player’s units in this system lose PLANETARY SHIELD. At the start of each space combat round, repair this ship.
-  Sustain Dmg, Bombard 5(x3). C8 C5(x2) M1 C3
-  Traits:
-  Munitions Reserves: At the start of each round of space combat, you may spend 2 trade goods; you may reroll any number of your dice during that combat round.
-  Armada: The maximum number of non-fighter ships you can have in each system is equal to 2 more than the number of tokens in your fleet pool. 
-  Faction Tech:
-  L4 Disruptors: During an invasion, units cannot use SPACE CANNON against your units. 
-  Non-Euclidean Shielding: When 1 of your units uses SUSTAIN DAMAGE, cancel 2 hits instead of 1.
-  Faction Promissory note:
-  War Funding: At the start of a round of space combat: The Letnev player loses 2 trade goods. During this combat round, reroll any number of your dice. Then, return this card to the Letnev Player. ">🦂</button>
-  <button id="p1-marker-raceToken" class="p1 marker raceToken" style="left:350px;top:580px">🦁</button>
-  <button id="p2-marker-raceToken" class="p2 marker raceToken" style="left:1770px;top:180px">🐢</button>
-  <button id="p3-marker-raceToken" class="p3 marker raceToken" style="left:1770px;top:580px">🥶</button>
-</div>
 
-  <script defer src="/__/firebase/init.js"></script>
-  <script defer src="/build/blueb.js"></script>
-  <script defer src="/build/player.js"></script>
-\
-</body>
-<!--- Jol-Nar
-Commodities: 4
-Flagship: When making a combat roll for this ship, each result of 9 or 10, before applying modifiers, produces 2 additional hits.
-Sustain Dmg. C8C6(x2)M1C3
-Traits:
-Fragile: Apply -1 to each of your unit’s Combat Rolls
-Brilliant: When you spend a command token to resolve the secondary ability of the “Technology” strategy card, you may resolve the primary ability instead.
-Analytical: When you research a technology that is not a unit upgrade technology, you may ignore 1 prerequisite.
-Faction Tech:
-Spacial Conduit Cylinder: You may exhaust this card after you activate a system that contains 1 or more of your units; that system is adjacent to all other systems that contain 1 or more of your units during this activation.
-E-Res Siphons: After another player activates a system that contains 1 or more of your ships, gain 4 trade goods.
-Faction Promissory note:
-Research Agreement: After the Jol-Nar research a technology that is not a faction technology: Gain that technology. Then, return this card to the Jol-Nar player.
-
-The Xxcha Kingdom
-Commodities: 4
-Flagship: You may use this unit’s SPACE CANNON against ships that are in an adjacent system.
-Sustain Dmg. Space Cannon 5(x3). C8C7(x2)M1C3
-Traits:
-Peace Accords: After you resolve the primary or secondary ability of the “Diplomacy” strategy card, you may gain control of 1 planet other than Mecatol Rex that does not contain any units and is in a system adjacent to a planet you control.
-Quash: When an agenda is revealed, you may spend 1 token from your strategy pool to discard that agenda and reveal 1 agenda from the top of the deck. Players vote on this agenda instead.
-Faction Tech:
-Instinct Training: You may exhaust this card and spend 1 token from your strategy pool when another player plays an action card; cancel that action card.
-Nullification Field: After another player activates a system that contains 1 or more of your ships, you may exhaust this card and spend 1 token from your strategy pool; immediately end that player’s turn.
-Faction Promissory note: 
-Political Favor: After an agenda is revealed: remove 1 token from the Xxcha player’s strategy pool and return it to his reinforcements. Then, discard the revealed agenda and reveal 1 agenda from the top of the deck. Players vote on this agenda instead. Then, return this card to the Xxcha player.
-
-Sardakk N’orr
-Commodities: 3
-Flagship: Apply +1 to the result of each of your other ship’s combat rolls in the system.
-Sustain Dmg. C8C6(x2)M1C3
-Traits:
-Unrelenting: Apply +1 to the result of each of your unit’s combat rolls.
-Faction Units:
-Exotrireme 1 (Dreadnought): Bombard 4(x2)
-Faction Tech:
-Exotrireme 2 (Dreadnought): Bombard 4(x2)
-After a round of space combat, you may destroy this unit to destroy up to 2 ships in this system.
-Valkyrie Particle Weave: After making combat rolls during a round of ground combat, if your opponent produced 1 or more hits, you produce 1 additional hit. 
-Faction Promissory note:
-Tekklar Legion: At the start of an invasion combat: Apply +1 to the result of each of your unit’s combat rolls during this combat. If your opponent is the N’orr player, apply -1 to the result of each of his unit’s combat rolls during this combat. Then, return this card to the N’orr player. 
-
-
-
-The Barony of Letnev
+    <button id="p0-marker-raceToken" class="p0 marker raceToken" style="left:350px;top:180px"
+      title="The Barony of Letnev
 Commodities: 2
 Flagship:Other player’s units in this system lose PLANETARY SHIELD. At the start of each space combat round, repair this ship.
-Sustain Dmg, Bombard 5(x3). C8C5(x2)M1C3
+Sustain Dmg, Bombard 5(x3). C8 C5(x2) M1 C3
 Traits:
 Munitions Reserves: At the start of each round of space combat, you may spend 2 trade goods; you may reroll any number of your dice during that combat round.
 Armada: The maximum number of non-fighter ships you can have in each system is equal to 2 more than the number of tokens in your fleet pool. 
@@ -1379,195 +1326,19 @@ Faction Tech:
 L4 Disruptors: During an invasion, units cannot use SPACE CANNON against your units. 
 Non-Euclidean Shielding: When 1 of your units uses SUSTAIN DAMAGE, cancel 2 hits instead of 1.
 Faction Promissory note:
-War Funding: At the start of a round of space combat: The Letnev player loses 2 trade goods. During this combat round, reroll any number of your dice. Then, return this card to the Letnev Player. 
+War Funding: At the start of a round of space combat: The Letnev player loses 2 trade goods. During this combat round, reroll any number of your dice. Then, return this card to the Letnev Player. ">🦂</button>
+    <button id="p1-marker-raceToken" class="p1 marker raceToken" style="left:350px;top:580px" title="         placeholder          ">🦁</button>
+    <button id="p2-marker-raceToken" class="p2 marker raceToken" style="left:1770px;top:180px" title="         placeholder          ">🐢</button>
+    <button id="p3-marker-raceToken" class="p3 marker raceToken" style="left:1770px;top:580px" title="         placeholder          ">🥶</button>
+  </div>
+  <div>
+    <!--reset only-->
 
-The Emirates of Hacan
-Commodities: 6
-Flagship: After you roll a die during a space combat in this system, you may spend 1 trade good to apply +1 to the result. 
-Sustain Dmg. C8C7(x2)M1C3
-Traits:
-Masters of Trade: You do not have to spend a command token to resolve the secondary ability of the “Trade” strategy card.
-Guild Ships: You can negotiate transactions with players who are not your neighbor.
-Arbiters: When you are negotiating a transaction, action cards can be exchanged as part of that transaction.
-Faction Tech:
-Quantum Datahub Node: At the end of the strategy phase, you may spend 1 token from your strategy pool and give another player 3 of your trade goods. If you do, give 1 of your strategy cards to that player and take 1 of his strategy cards.
-Production Biomes: ACTION: Exhaust this card and spend 1 token from your strategy pool to gain 4 trade goods and choose 1 other player; that player gains 2 trade goods. 
-Faction Promissory note:
-Trade Convoys: ACTION: Place this card faceup in your play area. While this card is in your play area, you may negotiate transactions with players who are not your neighbor. If you activate a system that contains 1 or more of the Hacan player’s units, return this card to the Hacan player.
+  </div>
+  <script defer src="/__/firebase/init.js"></script>
+  <script defer src="/build/player.js"></script>
+ <script defer src="/build/blueb.js"></script>
 
-The Federation of Sol
-Commodities: 4
-Flagship:At the end of the status phase, place 1 infantry from your reinforcements in this system’s space area.
-Sustain Dmg. C8C5(x2)M1C12
-Traits:
-Orbital Drop: ACTION: Spend 1 token from your strategy pool to place 2 infantry from your reinforcements on 1 planet you control.
-Versatile: When you gain command tokens during the status phase, gain 1 additional command token.
-Faction Units:
-Advanced Carrier 1 (Carrier): Capacity 6
-Spec Ops 1 (Infantry): Combat 7
-Faction Tech:
-Advanced Carrier 2: Sustain DMG. Capacity 8.
-Spec OPS 2: Combat 6.
-After this unit is destroyed, roll 1 die. IF the result is 5 or greater, place the unit on this card. At the start of your next turn, place each unit that is on this card on a planet you control in your home system.
-Faction Promissory note:
-Military Support: At the start of the Sol player’s turn: Remove 1 token from the Sol player’s strategy pool if able, and return it to his reinforcements. Then, you may place 2 infantry from your reinforcements on any planet you control. Then, return this card to the Sol player.
+</body>
 
-The Yssaril Tribes
-Commodities: 3
-Flagship: This ship can move through systems that contain other players’ ships.
-Sustain Dmg. C8C5(x2)M2C3
-Traits:
-Stall Tactics: ACTION: Discard 1 action card from your hand.
-Scheming: When you draw 1 or more action cards, draw 1 additional action card. Then, choose and discard 1 action card from your hand.
-Crafty: You can have any number of action cards in your hand. Game effects cannot prevent you from using this ability.
-Faction Tech:
-Mageon Implants: ACTION: Exhaust this card to look at another player’s hand of action cards. Choose 1 of those cards and add it to your hand. 
-Transparasteel Plating: During your turn of the action phase, players that have passed cannot play action cards.
-Faction Promissory note:
-Spy Net: Look at the Yssaril player’s hand of action cards. Choose 1 of those cards and add it to your hand. Then, return this card to the Yssaril player. 
-
-The Clan of Saar
-Commodities: 3
-Flagship: Sustain Dmg. Anti-Fighter 6(x4). C8C5(x2)M1C3
-Traits:
-Scavenge: After you gain control of a planet, gain 1 trade good. 
-Nomadic: You can score objectives even if you do not control the planets in your home system.
-Faction Units:
-Floating Factory (Space Dock): 
-Move 1, Capacity 4, Production 5.
-This unit is placed in a space area instead of on a planet. This unit can move and retreat as if it were a ship. If this unit is blockaded, it is destroyed.
-Faction Tech:
-Chaos Mapping: Other players cannot activate asteroid fields that contain 1 or more of your ships. At the start of your turn during the action phase, you may produced 1 unit in a system that contains at least 1 of your units that has PRODUCTION.
-Floating Factory 2: Move 2, Capacity 5, Production 7.
-Faction Promissory note:
-Ragh’s Call: After you commit 1 or more units to land on a planet: Remove all of the Saar player’s ground forces from that planet and place them on a planet controlled by the Saar player. Then, return this card to the Saar player.
-
-The Arborec
-Commodities: 3
-Flagship: After you activate this system, you may produce up to 5 units in this system.
-Sustain Dmg. C8C7(x2)M1C5
-Traits:
-Mitosis: Your space docs cannot produce infantry. At the start of the status phase, place 1 infantry from your reinforcements on any planet you control. 
-Faction Units:
-Letani Warrior (Infantry): Production 1
-Faction Tech:
-Letani Warrior 2: Production 2
-Bioplasmosis: At the end of the status phase, you may remove any number of infantry from planets you control and place them on 1 or more planets you control in the same or adjacent system. 
-Faction Promissory note:
-Stymie: ACTION: Place this card faceup in your play area. While this card is in your place area, the Arborec player cannot produce units in or adjacent to non-home systems that contain 1 or more of your units. If you activate a system that contains 1 or more of the Arborec player’s units, return this card to the Arborec player.
-
-The Nekro Virus
-Commodities: 3
-Flagship: At the start of a space combat, choose any number of your ground forces in this system to participate in that combat as if they were ships. 
-Sustain Dmg. C8C9(x2)M1C3
-Traits:
-Galactic Threat: You cannot vote on agendas. Once per agenda phase, after an agenda is revealed, you may predict aloud the outcome of that agenda. If your prediction is correct, gain 1 technology that is owned by a player who voted how you predicted. 
-Technological Singularity: Once per combat, after 1 of your opponent’s units is destroyed, you may gain 1 technology that is owned by that player.
-Propagation: You cannot research technology. When you would research a technology, gain 3 command tokens instead. 
-Faction Tech:
-Valefar Assimilator X/Y: When you would gain another player’s technology using 1 of your faction abilities, you may place the “X/Y” assimilator token on a faction technology owned by that player instead.  While that token is on a technology, , this card gains that technology’s text. You cannot place an assimilator token on technology that already has an assimilator token.
-Faction Promissory note:
-Antivirus: At the start of a combat: Place this card faceup in your play area. While this card is in your play area, the Nekro player cannot use his TECHNOLOGICAL SINGULARITY faction ability against you. If you activate a system that contains 1 or more of the Nekro player’s units, return this card to the Nekro player.
-
-The Embers of Muatt
-Commodities: 4
-Flagship: ACTION: Spend 1 token from your strategy pool to place 1 cruiser in this unit’s system. 
-Sustain Dmg. C8C5(x2)M1C3
-Traits:
-Star Forge: ACTION: Spend 1 token from your strategy pool to place either 2 fighters or 1 destroyer from your reinforcements in a system that contains 1 or more of your war suns. 
-Gashlai Physiology: Your ships can move through supernova. 
-Faction Units:
-Prototype War Sun 1: Move 1.
-Faction Tech:
-Prototype War Sun 2: C10C3(x3)M3C6
-Magmus Reactor: Your ships can move into supernovas. After 1 or more of your units use PRODUCTION in a system that either contains a war sun or is adjacent to a supernova, gain 1 trade good. 
-Faction Promissory note:
-Fires of the Gashlai: ACTION: Remove 1 token from the Muatt player’s fleet pool and return it to his reinforcements. Then, gain your war sun unit upgrade technology card. Then return this card to the Muatt player.
-
-The Winnu
-Commodities: 3
-Flagship: When this unit makes a combat roll, it rolls a number of dice equal to the number of your opponent’s non-fighter ships in this system.
-Sustain Dmg. C8C7M1C3
-Traits:
-Blood Ties: You do not have to spend influence to remove the custodians token from Mecatol Rex .
-Reclamation: After you resolve a tactical action during which you gained control of Mecatol Rex, you may place 1 PDS and 1 space dock from your reinforcements on Mecatol Rex.
-Faction Tech:
-Lazak Gate Folding: During your tactical actions, if you do not control Mecatol REx, treat its system as if it contains both an alpha and beta wormhole.
-Action: If you control Mecatol Rex, exhaust this card to place 1 infantry from your reinforcements on Mecatol Rex. 
-Hegemonic Trade Policy: Exhaust this card when 1 or more of your units use PRODUCTION; swap the resource and influence values of 1 planet you control until the end of your turn.
-Faction Promissory note:
-Acquiescence: At the end of the strategy phase: Exchange 1 of your strategy cards with a strategy card that was chosen by the WInnu player. Then, return this card to the Winnu player. 
-
-The Ghosts of Creuss
-Commodities: 4
-Flagship: This ship’s system contains a delta wormhole. During movement, this ship may move before or after your other ships.
-Sustain Dmg. C8C5M1C3
-Traits:
-Quantum Entanglement: You treat all systems that contain either an alpha or beta wormhole as adjacent to each other. Game effects cannot prevent you from using this ability. 
-Slipstream: During your tactical actions, apply +1 to the move value of each of your ships that starts its movement in your home system or in a system that contains either an alpha or beta wormhole. 
-Creuss Gate: When you create the game board, place the Creuss Gate (tile 17) where your home system would normally be placed. The Creuss Gate system is not a home system. Then, place your home system (tile 51) in your play area.
-Faction Tech:
-Wormhole Generator: At the start of the status phase, place or move a Creuss wormhole token into either a system that contains a planet you control or a non-home system that does not contain another player’s ships. 
-Dimensional Splicer: At the start of a space combat in a system that contains a wormhole and 1 or more of your ships, you may produce 1 hit and assign it to 1 of your opponent’s ships.
-Faction Promissory note:
-Creuss IFF: At the start of your turn during the action phase: Place or move a Creuss wormhole token into either a system that contains a planet you control or a non-home system that does not contain another player’s ships. Then, return this card to the Creuss player.
-
-The Mentak Coalition
-Commodities: 2
-Flagship: Other players’ ships in this system cannot use Sustain Dmg.
-Sustain Dmg. C8C7(x2)M1C3
-Traits:
-Ambush: At the start of a space combat, you may roll 1 die for each of up to 2 of your cruisers or destroyers in the system. For each result equal to or greater than that ship’s combat value, produce 1 hit; your opponent must assign it to 1 of his ships. 
-Pillage: After 1 of your neighbors gains trade goods or resolves a transaction, if he has 3 or more trade goods, you may take 1 of his trade goods or commodities. 
-Faction Tech:
-Mirror Computing: When you spend trade goods, each trade good is worth 2 resources or influence instead of 1. 
-Salvage Operations: After you win or lose a space combat, gain 1 trade good; if you won the combat, you may also produce 1 ship in that system of any ship type that was destroyed during the combat.
-Faction Promissory note:
-Promise of Protection: ACTION: Place this card faceup in your play area. While this card is in your play area, the Mentak player cannot use his PILLAGE faction ability against you. If you activate a system that contains 1 or more of the Mentak player’s units, return this card to the Mentak player.
-
-The Yin Brotherhood
-Commodities: 2
-Flagship: When this ship is destroyed, destroy all ships in this system.
-Sustain Dmg. C8C9(x2)M1C3
-Traits:
-Indoctrination: At the start of a ground combat, you may spend 2 influence to replace 1 of your opponent’s participating infantry with 1 infantry from your reinforcements. 
-Devotion: After each space battle round, you may destroy 1 of your cruisers or destroyers to produce 1 hit and assign it to 1 of your opponent’s ships.
-Faction Tech:
-Yin Spinner: After 1 or more of your units use PRODUCTION, place 1 infantry from your reinforcements on a planet you control in that system.
-Impulse Core: At the start of a space combat, you may destroy 1 of your cruisers or destroyers in the active system to produce 1 hit against your opponent’s ships; that hit must be assigned by your opponent to 1 of his non-fighter ships if able.
-Faction Promissory note:
-Greyfire Mutagen: After a system is activated: The YIn player cannot use faction abilities or faction technology during this tactical action. Then, return this card to the Yin player.
-
-The Naalu Collective
-Commodities: 3
-Flagship: During an invasion in this system, you may commit fighters to planets as if they were ground forces. After combat, return those units to the space area. 
-Sustain Dmg. C8C9(x2)M1C6
-Traits:
-Telepathic: At the end of the strategy phase, place the Naalu “0” token on your strategy card; you are first in initiative order.
-Foresight: After another player moves ships into a system that contains 1 or more of your ships; you may place 1 token from your strategy pool in an adjacent system that does not contain another player’s ships; move your ships from the active system into that system.
-Faction Units:
-Hybrid Crystal Fighter 1: Combat 8
-Faction Tech:
-Hybrid Crystal Fighter 2: Combat 7
-This unit may move without being transported. Each fighter in excess of your ships’ capacity counts as ½ of a ship against your fleet pool. 
-Neuroglaive: After another player activates a system that contains 1 or more of your ships, that player removes 1 token from his fleet pool and returns it to his reinforcements.
-Faction Promissory note:
-Gift of Prescience: At the end of the strategy phase: Place this card faceup in your play area and place the Naalu “0” token on your strategy card; you are first in initiative order. The Naalu player cannot use his TELEPATHIC faction ability during this round. Return this card to the Naalu player at the end of the status phase.
-
-The L1Z1X Mindnet
-Commodities: 2
-Flagship: During a space combat, hits produced by this ship and by your dreadnaughts in this system must be assigned to non-fighter ships if able. 
-Sustain Dmg. 
-Traits:
-Assimilate: When you gain control of a planet, replace each PDS and space dock that is on that planet with a matching unit from your reinforcements. 
-Harrow: After each round of ground combat, your ships in the active system may use their BOMBARDMENT abilities against your opponent’s ground forces on the planet.
-Faction Units:
-Super-Dreadnaught 1: Capacity 2
-Faction Tech:
-Super-Dreadnaught 2: Combat 4, Capacity 2, 
-Bombardment 4
-Inheritance Systems: You may exhaust this card and spend 2 resources when you research a technology; ignore all of that technology’s prerequisites. 
-Faction Promissory note:
-Cybernetic Enhancements: At the start of your turn: Remove 1 token from the L1X1X player’s strategy pool and return it to his reinforcements. Then, place 1 command token from your reinforcements in your strategy pool. Then, return this card to the L1X1X player.
--->
 </html>

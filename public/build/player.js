@@ -4,27 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
     //Timer
     const timer = document.getElementById('timer')
     const timerBorderTick = setInterval(toggleTimerBorder, 1000)
-
+    db.ref('timer').child('p').on('value', snap => toggleTimerColor(Number(snap.val())))
     function toggleTimerBorder() {
         timer.classList.toggle('tick')
+        timer.style.transform = `scale(${Math.max(1,Number(timer.innerHTML)/30)})`
     }
 
     function toggleTimerColor(playerNum = 0) {
-        timer.classList.add(playerNum)
         let playerNums = [0, 1, 2, 3]
         let index = playerNums.indexOf(playerNum)
         if (index !== -1) playerNums.splice(index, 1)
-        timer.classList.remove(playerNum)
-        db.ref('timer').child('p').update(`${playerNum}`)
+        for (num of playerNums) timer.classList.remove(`p${num}`)
+        timer.classList.add(`p${playerNum}`)
+        db.ref('timer').child('p').set(`${playerNum}`)
     }
 
     //Playerboard
     const playerboards = document.getElementsByClassName('playerboard')
     for (let el of playerboards) {
         let R = db.ref(`${el.id}`)
-        el.oninput = e => R.child('txt').update(el.value)
+        console.log(el.id)
+        el.oninput = e => R.child('txt').set(el.value)
     }
-    
+
     //Dice roll logs
     const log1 = document.getElementById('log1')
     const log2 = document.getElementById('log2')
@@ -71,19 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         //guard non-moving components
-        if (!has('static')) return
+        if (has('static')) return
 
-        //sync x y z
+        //listen to x y z
         R.child('x').on('value', snap => el.style.left = `${snap.val()}`)
         R.child('y').on('value', snap => el.style.top = `${snap.val()}`)
         R.child('z').on('value', snap => el.style.zIndex = Number(`${snap.val()}`))
 
-        //sync text
+        //listen to text
         if (!has('card') || !has('CC') || !has('marker')) {
             R.child('txt').on('value', snap => el.innerHTML = `${snap.val()}`)
         }
 
-        //sync rotation
+        //listen to rotation
         if (has('card') || has('strategycard') || has('CC')) {
             R.child('r').on('value', snap => {
                 let cur = snap.val() == 'true'
@@ -93,12 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         }
 
-        //sync size
+        //listen to size
         if (has('CC') || has('marker')) R.child('sm').on('value', snap => el.classList.toggle('sm', snap.val() == 'true'))
-
 
         //MOUSEDOWN
         el.onmousedown = e => {
+            console.log(el.id)
             let cx = e.clientX
             let cy = e.clientY
             let shiftX = cx - el.offsetLeft
@@ -114,17 +116,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 function toggleClass(cls = 'r') {
                     let cur = has(`${cls}`)
                     el.classList.toggle(`${cls}`, !cur)
-                    R.child(`${cls}`).update(`${!cur}`)
+                    R.child(`${cls}`).set(`${!cur}`)
                 }
 
                 function updateTxt(txt) {
-                    R.child('txt').update(txt)
+                    R.child('txt').set(txt)
                 }
                 //timer
                 if (has('timer')) {
                     if (e.key == 's') {
                         timer.innerHTML = 0
-                        R.ref('txt').update(0)
+                        R.child('txt').set(0)
                     }
                     if ([1, 2, 3, 4].includes(Number(e.key))) toggleTimerColor(`${Number(e.key)-1}`)
                 }
@@ -154,8 +156,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     let lastchar = el.innerHTML.substring(el.innerHTML.length - 1, el.innerHTML.length)
                     if (e.key == 's') toggleClass('s')
                     if (el.innerHTML.includes(':') || lastchar == 'F' || lastchar == 'I') {
-                        if (e.key == 'F' && el.innerHTML.length < 20) el.innerHTML += 'F'
-                        if (e.key == 'I' && el.innerHTML.length < 20) el.innerHTML += 'I'
+                        if (e.key == 'F' && el.innerHTML.length < 25) el.innerHTML += 'F'
+                        if (e.key == 'I' && el.innerHTML.length < 25) el.innerHTML += 'I'
+                        if (e.key == 'G' && el.innerHTML.length < 25) el.innerHTML += 'I'
                         if (e.key == "Backspace" && lastchar != ':' && el.innerHTML.length > 1) {
                             e.preventDefault()
                             el.innerHTML = el.innerHTML.substring(0, el.innerHTML.length - 1)
