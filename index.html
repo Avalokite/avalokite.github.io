@@ -68,7 +68,7 @@
 	   Firebase + JS <a href="https://nemesisio.web.app/mmcc">realtime co-op murder mystery game</a>
 	   Firebase + JS <a href="https://alphabetmarmalade.web.app/">realtime co-op word game</a>
 	   Firebase + JS <a href="https://nemesismini.firebaseapp.com/">realtime 5p co-op survival horror game</a>		
-	   Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetracking in a 4p civ game(red player)</a> <a href="vanillati.web.app/yellow.html">(yellow player)</a>
+	   Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetracking in a 4p civ game(red player)</a> <a href="https://vanillati.web.app/yellow.html">(yellow player)</a>
 
 	</pre>
 	<div class="image-grid"> 
@@ -150,6 +150,7 @@
 	        img.style.maxHeight = '80%';
 	        img.style.maxWidth = '900px'; // Max width
 	        img.style.maxHeight = '900px'; // Max height
+		img.style.objectFit = 'contain'; // Ensure the whole image is shown
 	        img.style.zIndex = '100'; // Ensure the image is above the overlay
 	        img.classList.add('enlarged');
 	      }
