@@ -119,32 +119,50 @@
 	<script>
 	document.addEventListener('DOMContentLoaded', function() {
 	  const images = document.querySelectorAll('.image-container img');
-	  const body = document.body;
-	
-	  // Create dark overlay and append to body
 	  const overlay = document.createElement('div');
-	  overlay.className = 'dark-overlay';
-	  body.appendChild(overlay);
+	  overlay.style.position = 'fixed';
+	  overlay.style.top = 0;
+	  overlay.style.left = 0;
+	  overlay.style.width = '100%';
+	  overlay.style.height = '100%';
+	  overlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
+	  overlay.style.display = 'none';
+	  overlay.style.zIndex = '10'; // Ensure it's above other content but below the enlarged image
+	  document.body.appendChild(overlay);
 	
 	  images.forEach(img => {
 	    img.addEventListener('click', function(event) {
-	      event.stopPropagation(); // Prevent the click from bubbling up
-	      overlay.style.display = 'flex'; // Show the dark overlay
-	      overlay.innerHTML = ''; // Clear previous content
+	      event.preventDefault(); // Prevent default anchor action
+	      event.stopPropagation(); // Stop the event from bubbling up
 	
-	      // Clone the image to show in the overlay
-	      const enlargedImg = img.cloneNode();
-	      enlargedImg.classList.add('enlarged-image');
-	      enlargedImg.addEventListener('click', function() {
-	        window.open(img.parentElement.href, '_blank'); // Open the link on second click
-	      });
-	      overlay.appendChild(enlargedImg);
+	      const alreadyEnlarged = img.classList.contains('enlarged');
+	      if (alreadyEnlarged) {
+	        // If the image is already enlarged, navigate to the link
+	        window.open(img.parentElement.href, '_blank');
+	      } else {
+	        // Display the overlay and enlarge the image
+	        overlay.style.display = 'block';
+	        img.style.position = 'fixed';
+	        img.style.top = '50%';
+	        img.style.left = '50%';
+	        img.style.transform = 'translate(-50%, -50%)';
+	        img.style.maxWidth = '1080px';
+	        img.style.maxHeight = '1080px';
+	        img.style.zIndex = '100'; // Ensure the image is above the overlay
+	        img.classList.add('enlarged');
+	      }
 	    });
 	  });
 	
-	  // Clicking the darkened area will close the overlay
+	  // Clicking on the overlay should shrink the image back and hide the overlay
 	  overlay.addEventListener('click', function() {
-	    this.style.display = 'none';
+	    images.forEach(img => {
+	      if (img.classList.contains('enlarged')) {
+	        img.removeAttribute('style'); // Reset image styles
+	        img.classList.remove('enlarged');
+	      }
+	    });
+	    overlay.style.display = 'none'; // Hide the overlay
 	  });
 	});
 	</script>
