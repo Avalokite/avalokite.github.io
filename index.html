@@ -11,32 +11,49 @@
 		body {background-color:#EEE}
 		div {display:flex; flex-wrap:wrap}
 		pre {color:#111}
-		.image-grid {
-		  display: grid;
-		  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-		  gap: 10px;
-		}
-		
-		.image-container {
-		  width: 600px;
-		  height: 600px;
-		  overflow: hidden;
-		}
-		
-		.image-container img {
-		  width: 100%;
-		  max-width: 960px; /* Maximum width when enlarged */
-		  height: 600px; /* Ensures images are cropped to fill the square */
-		  object-fit: cover; /* Ensures images cover the area, cropping as necessary */
-		  transition: transform 0.3s ease; /* Smooth transition for enlarging/shrinking */
-		}
-		
-		/* Initial state for an image, before any interaction */
-		.image-container img.initial {
-		  width: auto; /* Adjusts width automatically to maintain aspect ratio */
-		  height: 600px; /* Fixed height to match the container */
-		  max-width: none; /* Overrides the max-width set above */
-		}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Keeps the square shape */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Darkened background */
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensure it's above other content */
+}
+
+/* Styles for the enlarged image */
+.enlarged-image {
+  width: 1080px;
+  height: 1080px;
+  object-fit: cover;
+}
 	</style>
 
 </head>
@@ -69,7 +86,7 @@
 		
 		<div class="image-container">
 		<a href="https://alphabetmarmalade.web.app" target="_blank">
-	    		<img src="alphabetmarmalade.png" alt="Alphabet Marmalade Screenshot">
+	    		<img src="alphabetmarmalade1.png" alt="Alphabet Marmalade Screenshot">
 		</a>
 	  	</div>
 		
@@ -102,30 +119,34 @@
 	<script>
 	document.addEventListener('DOMContentLoaded', function() {
 	  const images = document.querySelectorAll('.image-container img');
+	  const body = document.body;
+	
+	  // Create dark overlay and append to body
+	  const overlay = document.createElement('div');
+	  overlay.className = 'dark-overlay';
+	  body.appendChild(overlay);
 	
 	  images.forEach(img => {
 	    img.addEventListener('click', function(event) {
 	      event.stopPropagation(); // Prevent the click from bubbling up
-	      const alreadyEnlarged = img.classList.contains('enlarged');
-	      if (alreadyEnlarged) {
-	        // If the image is already enlarged, navigate to the link
-	        window.open(img.parentElement.href, '_blank');
-	      } else {
-	        // Enlarge the image
-	        img.style.maxWidth = '100%'; // Allows the image to fill the screen width
-	        img.classList.add('enlarged');
-	      }
-	    });
+	      overlay.style.display = 'flex'; // Show the dark overlay
+	      overlay.innerHTML = ''; // Clear previous content
 	
-	    // Clicking anywhere else on the document should shrink the image back
-	    document.addEventListener('click', function() {
-	      if (img.classList.contains('enlarged')) {
-	        img.style.removeProperty('max-width');
-	        img.classList.remove('enlarged');
-      }
-    });
-  });
-});
+	      // Clone the image to show in the overlay
+	      const enlargedImg = img.cloneNode();
+	      enlargedImg.classList.add('enlarged-image');
+	      enlargedImg.addEventListener('click', function() {
+	        window.open(img.parentElement.href, '_blank'); // Open the link on second click
+	      });
+	      overlay.appendChild(enlargedImg);
+	    });
+	  });
+	
+	  // Clicking the darkened area will close the overlay
+	  overlay.addEventListener('click', function() {
+	    this.style.display = 'none';
+	  });
+	});
 	</script>
 
 
