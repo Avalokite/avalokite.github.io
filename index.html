@@ -11,7 +11,32 @@
 		body {background-color:#EEE}
 		div {display:flex; flex-wrap:wrap}
 		pre {color:#111}
-		img {max-width:1920px;min-width:480px}
+		.image-grid {
+		  display: grid;
+		  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		  gap: 10px;
+		}
+		
+		.image-container {
+		  width: 600px;
+		  height: 600px;
+		  overflow: hidden;
+		}
+		
+		.image-container img {
+		  width: 100%;
+		  max-width: 960px; /* Maximum width when enlarged */
+		  height: 600px; /* Ensures images are cropped to fill the square */
+		  object-fit: cover; /* Ensures images cover the area, cropping as necessary */
+		  transition: transform 0.3s ease; /* Smooth transition for enlarging/shrinking */
+		}
+		
+		/* Initial state for an image, before any interaction */
+		.image-container img.initial {
+		  width: auto; /* Adjusts width automatically to maintain aspect ratio */
+		  height: 600px; /* Fixed height to match the container */
+		  max-width: none; /* Overrides the max-width set above */
+		}
 	</style>
 
 </head>
@@ -19,22 +44,89 @@
 <body>
 	<pre> 
 	Chris Ma's Github page.
-	I study cognitive science and make browser versions of tabletop games.
+	I study cognitive science and make browser versions of popular tabletop games.
 	
-	   Svelte <a href="https://svelte.dev/repl/a6fa551433e549c6b0fe00594143719b?version=3.38.3">Spiking neural network learning in realtime via the perturbation algorithm</a>
-	   Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetracking in a 4p civ game(red player)</a> <a href="vanillati.web.app/yellow.html">(yellow player)</a>
-	   Firebase + JS <a href="https://redrisingmini.web.app/red.html">realtime 5p cardgame</a> <a href="redrisingmini.web.app/yellow.html">(player 2)</a>
-	   Firebase + JS <a href="https://nemesismini.web.app/gm.html">realtime 5p co-op survival horror game</a>
+	   Svelte <a href="https://svelte.dev/repl/a6fa551433e549c6b0fe00594143719b?version=3.38.3">Spiking neural network learning in realtime via perturbation</a>
+	   Firebase + JS <a href="https://redrisingmini.web.app">realtime 5p cardgame</a>
 	   Firebase + JS <a href="https://nemesisio.web.app/mmcc">realtime co-op murder mystery game</a>
 	   Firebase + JS <a href="https://alphabetmarmalade.web.app/">realtime co-op word game</a>
+	   Firebase + JS <a href="https://nemesismini.firebaseapp.com/">realtime 5p co-op survival horror game</a>		
+	   Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetracking in a 4p civ game(red player)</a> <a href="vanillati.web.app/yellow.html">(yellow player)</a>
+
 	</pre>
-	<div><img src="/Svelte1.jpg" alt="Spiking neural network learns in realtime via perturbation">
+	<div class="image-grid"> 
+		
+		<div class="image-container">
+	  	<a href="https://svelte.dev/repl/a6fa551433e549c6b0fe00594143719b?version=3.38.3" target="_blank">
+	    		<img src="Svelte1.jpg" alt="Spiking neural network learns in realtime via perturbation">
+		</a>
+		</div>
+		<div class="image-container">
+	  	<a href="https://redrisingmini.web.app" target="_blank">
+	    		<img src="RedRising3.jpg" alt="political space epic game screenshot">
+		</a>
+		</div>
+		
+		<div class="image-container">
+		<a href="https://alphabetmarmalade.web.app" target="_blank">
+	    		<img src="alphabetmarmalade.png" alt="Alphabet Marmalade Screenshot">
+		</a>
+	  	</div>
+		
+		<div class="image-container">
+	  	<a href="https://nemesisio.web.app/mmcc" target="_blank">
+	    		<img src="mmcc.jpg" alt="mystery game screenshot">
+		</a>
+		</div>
+		
+		<div class="image-container">
+		<a href="https://nemesismini.firebaseapp.com/" target="_blank">
+	    		<img src="Nemesis2.jpg" alt="space horror game screenshot">
+		</a>
+		</div>
+		
+		<div class="image-container">
+		<a href="https://svelte.dev/repl/a6fa551433e549c6b0fe00594143719b?version=3.38.3" target="_blank">
+	    		<img src="TI1.jpg" alt="4x space epic game screenshot">
+		</a>
+		</div>
+
+	</div>
+<!-- 	<div><img src="/Svelte1.jpg" alt="Spiking neural network learns in realtime via perturbation">
 	<img src="/TI1.jpg" alt="Mousetracking in a realtime multiplayer boardgame">
 	<img src="/RedRising3.jpg" alt="Realtime multiplayer cardgame">
 	<img src="/Nemesis2.jpg" alt="Realtime multiplayer cooperative boardgame">
 	<img src="/mmcc.jpg" alt="Realtime multiplayer cooperative boardgame">
-	</div>
+	</div> -->
+
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+	  const images = document.querySelectorAll('.image-container img');
 	
+	  images.forEach(img => {
+	    img.addEventListener('click', function(event) {
+	      event.stopPropagation(); // Prevent the click from bubbling up
+	      const alreadyEnlarged = img.classList.contains('enlarged');
+	      if (alreadyEnlarged) {
+	        // If the image is already enlarged, navigate to the link
+	        window.open(img.parentElement.href, '_blank');
+	      } else {
+	        // Enlarge the image
+	        img.style.maxWidth = '100%'; // Allows the image to fill the screen width
+	        img.classList.add('enlarged');
+	      }
+	    });
+	
+	    // Clicking anywhere else on the document should shrink the image back
+	    document.addEventListener('click', function() {
+	      if (img.classList.contains('enlarged')) {
+	        img.style.removeProperty('max-width');
+	        img.classList.remove('enlarged');
+      }
+    });
+  });
+});
+	</script>
 
 
 </body>
