@@ -131,32 +131,28 @@ Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetra
 	  overlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
 	  overlay.style.display = 'none';
 	  overlay.style.zIndex = '10';
-	  overlay.style.display = 'flex';
-	  overlay.style.justifyContent = 'center';
-	  overlay.style.alignItems = 'center';
-	  overlay.style.flexDirection = 'column';
 	  document.body.appendChild(overlay);
 	
-	  images.forEach(img => {
-	    const link = document.createElement('a');
-	    link.href = img.parentElement.href;
-	    link.textContent = "Open Link"; // Customize text as needed
-	    link.style.display = 'none';
-	    link.target = '_blank';
-	    document.body.appendChild(link); // Positioning handled in CSS
+	  const link = document.createElement('a');
+	  link.textContent = "Open Link"; // Customize text as needed
+	  link.style.display = 'none';
+	  link.target = '_blank';
+	  document.body.appendChild(link); // Add the link to the body, position it later
 	
+	  images.forEach(img => {
 	    img.addEventListener('click', function(event) {
 	      event.preventDefault();
-	
-	      // Show the overlay and the link
 	      overlay.style.display = 'flex';
-	      link.style.display = 'block'; // Show the link
+	
+	      // Prepare the link for display
+	      link.href = img.parentElement.href;
+	      link.style.display = 'block'; // Make the link visible
 	      link.style.position = 'fixed';
 	      link.style.right = '20px'; // Distance from the right edge of the viewport
-    	      link.style.bottom = '20px'; // Distance from the bottom edge of the viewport
-	      link.style.zIndex = '1000'; // Ensure the link is clickable
-	      link.style.marginTop = '550px'; // Adjust based on image/enlargement size
+	      link.style.bottom = '20px'; // Distance from the bottom edge of the viewport
+	      link.style.zIndex = '1000'; // Ensure the link appears above the overlay
 	
+	      // Enlarge the image
 	      img.classList.add('enlarged');
 	      img.style.position = 'fixed';
 	      img.style.top = '50%';
@@ -170,7 +166,8 @@ Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetra
 	    });
 	  });
 	
-	  overlay.addEventListener('click', function(event) {
+	  // Function to reset the image and hide the overlay and link
+	  function resetView() {
 	    images.forEach(img => {
 	      if (img.classList.contains('enlarged')) {
 	        img.removeAttribute('style'); // Reset image styles
@@ -178,11 +175,18 @@ Firebase + Svelte <a href="https://vanillati.web.app/red.html">realtime mousetra
 	      }
 	    });
 	    overlay.style.display = 'none'; // Hide the overlay
+	    link.style.display = 'none'; // Hide the link
+	  }
 	
-	    // Hide all links related to the images
-	    document.querySelectorAll('a').forEach(link => {
-	      if (link.textContent === "Open Link") { // Match the text or use a class/ID
-	        link.style.display = 'none';
+	  // Clicking on the overlay shrinks the image back down
+	  overlay.addEventListener('click', resetView);
+	
+	  // Clicking on the enlarged image also shrinks it back down
+	  images.forEach(img => {
+	    img.addEventListener('click', function(event) {
+	      if (img.classList.contains('enlarged')) {
+	        event.stopPropagation(); // Prevent the overlay click handler from firing
+	        resetView();
 	      }
 	    });
 	  });
